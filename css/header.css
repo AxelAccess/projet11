@@ -1,0 +1,51 @@
+html{
+    margin-top: -16px !important;
+}
+
+.menu-header-container{
+    background-color: white;
+    height: 80px;
+}
+#menu-header{
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    gap: 45px;
+    margin-right: 145px;
+    padding-top: 31px;
+}
+a:-webkit-any-link {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.logo{
+    position: absolute;
+    padding-top: 33px;
+    margin-left: 145px;
+}
+
+.hero{
+    width: 100%;
+    height: 962px;
+}
+.titleHeader{
+    position: absolute;
+    width: 1000px;
+    margin-top: 320px;
+    left: 314px;
+}
+
+.contactModale{
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 100px;
+    left: 541px;
+    z-index: 9999;
+    width: 600px;
+    height: 704px;
+    text-align: center;
+}

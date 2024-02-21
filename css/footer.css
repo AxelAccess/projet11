@@ -1,0 +1,8 @@
+#menu-footer{
+    border-top: 1.3px solid black;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    padding-top: 31px;
+}

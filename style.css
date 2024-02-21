@@ -1,6 +1,9 @@
 /*
-Theme Name: projet11
-Description: Theme enfant
-Template: twentytwentyone
+Theme Name: projet11theme
+Description: Theme
 Version: 0.1.0
 */
+
+@import'css/header.css';
+@import'css/forms.css';
+@import'css/footer.css';
