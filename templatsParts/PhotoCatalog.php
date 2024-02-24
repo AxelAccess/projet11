@@ -1,3 +1,4 @@
+<section class="alignForms">
 <div class=blockForms>
 <select name="event" class="forms">
     <option value="categoriesPhoto">catégories</option>
@@ -11,9 +12,12 @@
     <option value="paysage">paysage</option>
     <option value="portrait">portrait</option>
 </select>
+</div>
 
-<select name="Sort" class="forms">
+<div class=blockFormsForRight>
+<select name="sort" class="forms">
     <option value="newest">plus récentes</option>
     <option value="oldest">plus anciennes</option>
 </select>
 </div>
+</section>

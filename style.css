@@ -5,5 +5,8 @@ Version: 0.1.0
 */
 
 @import'css/header.css';
+@import'css/Heroheader.css';
 @import'css/forms.css';
 @import'css/footer.css';
+
+@import'css/picsInfoPage.css';

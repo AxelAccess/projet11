@@ -1,4 +1,5 @@
 <?php 
 get_header();
-include 'PhotoCatalog.php';
+include 'templatsParts/heroHeader.php';
+include 'templatsParts/PhotoCatalog.php';
 get_footer();

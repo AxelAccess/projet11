@@ -1,0 +1,64 @@
+.mainPics{
+
+    margin-right: -227px !important;
+
+}
+.titleDetailPics{
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 5px;
+    padding-left: 145px;
+}
+
+.detailsPics{
+    padding-left: 145px;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.separatorDetailContact{
+    width: 690px;
+    margin-left: 140px;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+.blocContact{
+    margin-top: -75px;
+    margin-bottom: -35px;
+    margin-left: 140px;
+}
+
+.contactButton{
+    margin-top: 38px !important;
+    margin-right: 34px !important;
+    width: 272px !important;
+}
+.ContactP{
+    margin-top: 53px;
+}
+.navBloc{
+    position: absolute;
+    right: 152px !important;
+}
+.navPic{
+    width: 81px!important;
+    height: 71px!important;
+}
+
+.arrows{
+    width: 81px;
+}
+.separatorContact{
+    margin-top: 75px;
+    width: 1400px;
+    margin-right: 138px;
+}
+
+.alsoLike{
+    margin-left: 140px;
+}
+
+.alsoLikePics{
+    width: 495px!important;
+    height: 564px!important;
+}
