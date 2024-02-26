@@ -12,7 +12,7 @@ html{
     display: flex;
     justify-content: right;
     gap: 45px;
-    margin-right: 145px;
+    margin-right: 265px;
     padding-top: 31px;
 }
 a:-webkit-any-link {
@@ -25,7 +25,7 @@ a:-webkit-any-link {
 .logo{
     position: absolute;
     padding-top: 33px;
-    margin-left: 145px;
+    margin-left: 270px;
 }
 
 

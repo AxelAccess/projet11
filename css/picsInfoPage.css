@@ -1,36 +1,34 @@
 .mainPics{
-
-    margin-right: -227px !important;
-
+    margin-right: 15px !important;
 }
 .titleDetailPics{
     font-size: 45px;
     text-transform: uppercase;
     line-height: 5px;
-    padding-left: 145px;
+    margin-left: 270px;
 }
 
 .detailsPics{
-    padding-left: 145px;
+    margin-left: 270px;
     text-transform: uppercase;
     line-height: 30px;
 }
 
 .separatorDetailContact{
-    width: 690px;
-    margin-left: 140px;
+    width: 564px;    
+    margin-left: 270px;
     margin-bottom: 15px;
     margin-top: 40px;
 }
 .blocContact{
     margin-top: -75px;
     margin-bottom: -35px;
-    margin-left: 140px;
+    margin-left: 270px;
 }
 
 .contactButton{
-    margin-top: 38px !important;
-    margin-right: 34px !important;
+    margin-top: 19px !important;
+    margin-right: 270px !important;
     width: 272px !important;
 }
 .ContactP{
@@ -38,9 +36,10 @@
 }
 .navBloc{
     position: absolute;
-    right: 152px !important;
+    right: 275px;
 }
 .navPic{
+    margin-top: 10px;
     width: 81px!important;
     height: 71px!important;
 }
@@ -50,15 +49,21 @@
 }
 .separatorContact{
     margin-top: 75px;
-    width: 1400px;
-    margin-right: 138px;
+    width: 1148px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .alsoLike{
-    margin-left: 140px;
+    margin-left: 260px;
 }
 
-.alsoLikePics{
-    width: 495px!important;
-    height: 564px!important;
+.leftPicAlsoLike{
+    position: absolute;
+    left: 270px;
+}
+
+.rightPicAlsoLike{
+    position: absolute;
+    right:270px;
 }
