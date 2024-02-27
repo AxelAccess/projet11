@@ -19,3 +19,4 @@ contact.addEventListener("click", function() {
     modale.style.zIndex = "2" 
 })
 })
+
