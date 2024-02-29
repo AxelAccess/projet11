@@ -10,9 +10,9 @@ html{
 #menu-header{
     list-style-type: none;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     gap: 45px;
-    margin-right: 145px;
+    margin-left: 950px;
     padding-top: 34px;
 }
 a:-webkit-any-link {
@@ -27,8 +27,6 @@ a:-webkit-any-link {
     padding-top: 34px;
     margin-left: 146px;
 }
-
-
 
 .contactModale{
     display: none;

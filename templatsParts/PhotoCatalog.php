@@ -26,18 +26,32 @@
 
 <section class="picturesList">
 <?php
-$picsFolder = "/images/PhotosNMota";
-$url = get_stylesheet_directory_uri() . $picsFolder;
-$localPathFolder = get_stylesheet_directory() . $picsFolder;
+// Custom query to retrieve 'photos' post type
+$args = array(
+    'post_type' => 'photo',
+    'posts_per_page' => 8, // Nombre d'articles à afficher
+);
 
-if (is_dir($localPathFolder)){
-    $files = scandir($localPathFolder);    
-    foreach ($files as $file){
-        
-        if (in_array(pathinfo($file, PATHINFO_EXTENSION), ["jpg", "jpeg", "png"])) {
-            echo '<img class="pictures" src="' . $url . '/' . $file . '" /><br>';
-        }
+$photo_query = new WP_Query($args);
+
+if ($photo_query->have_posts()) {
+    while ($photo_query->have_posts()) {
+        $photo_query->the_post();       
+?>
+        <div>
+            <?php
+           
+            if (has_post_thumbnail()) {
+                the_post_thumbnail('full', array('class' => 'photoCatalogPics'));
+            }
+            ?>
+            <!-- Ajoutez d'autres balises HTML ou PHP selon vos besoins -->
+        </div>
+        <?php
     }
+
+    // Réinitialise la requête postdata
+  
 }
 ?>
 </section>

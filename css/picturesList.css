@@ -23,16 +23,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-left: 140px;
+    margin-top: 41px;
     width: 1148px;
     height: 2040px;
-    
-    overflow: hidden;
+
 }
 
 .pictures{
     object-fit: cover;
     max-width:564px;
     max-height:495px;
+    width: auto;
+    height: auto;
+}
+
+.photoCatalogPics{
+    object-fit: cover;
+    max-width:564px;
+    max-height:495px;
+    min-width:564px;
+    min-height:495px;
     width: auto;
     height: auto;
 }
