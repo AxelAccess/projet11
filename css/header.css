@@ -12,8 +12,8 @@ html{
     display: flex;
     justify-content: right;
     gap: 45px;
-    margin-right: 265px;
-    padding-top: 31px;
+    margin-right: 145px;
+    padding-top: 34px;
 }
 a:-webkit-any-link {
     text-decoration: none;
@@ -24,8 +24,8 @@ a:-webkit-any-link {
 
 .logo{
     position: absolute;
-    padding-top: 33px;
-    margin-left: 270px;
+    padding-top: 34px;
+    margin-left: 146px;
 }
 
 
@@ -42,11 +42,3 @@ a:-webkit-any-link {
     text-align: center;
 }
 
-.blockFormsForRight{
-    padding-left: 330px;
-    padding-top: 30px;
-}
-
-.alignForms{
-    display: flex;
-}

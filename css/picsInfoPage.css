@@ -1,69 +1,116 @@
+.topSection{
+    display: flex;
+}
 .mainPics{
-    margin-right: 15px !important;
+    padding-top: 38px;
+    margin-left: 141px;
+    width: 563px;
+    height: 844px;
+    object-fit: cover;
 }
-.titleDetailPics{
-    font-size: 45px;
+.descriptionPicsTitle{
+    width: 300px;
+    margin-bottom: 0px;
+    padding-top: 525px;
+    margin-left: 145px;
+    font-family: "Space Mono";
+    font-size: 66px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 58px; /* 87.879% */
     text-transform: uppercase;
-    line-height: 5px;
-    margin-left: 270px;
 }
-
-.detailsPics{
-    margin-left: 270px;
+.descriptionPics{
+    margin-left: 145px;
+    font-family: "Space Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    line-height: 30px;
 }
-
 .separatorDetailContact{
-    width: 564px;    
-    margin-left: 270px;
-    margin-bottom: 15px;
-    margin-top: 40px;
+    position: absolute;
+    width: 564px;
+    margin-left: 144px;
+    top: 990px;
 }
-.blocContact{
-    margin-top: -75px;
-    margin-bottom: -35px;
-    margin-left: 270px;
+.middleSection{
+    display: flex;
+    align-items: center;
+    padding-top: 48px;
+}
+.insterested{
+    display: flex;
+    width: 197px;
+    margin-left: 144px;
+   
+}
+.contactButton{
+    display: flex;
+    width: 272px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 96px;
+
+    border-radius: 2px;
+    border-color: white;
+    background: #D8D8D8;
+
+    font-family: "Space Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
 }
 
-.contactButton{
-    margin-top: 19px !important;
-    margin-right: 270px !important;
-    width: 272px !important;
-}
-.ContactP{
-    margin-top: 53px;
-}
-.navBloc{
-    position: absolute;
-    right: 275px;
-}
 .navPic{
-    margin-top: 10px;
+    margin-top: -8px;
+    margin-left: 502px;
     width: 81px!important;
     height: 71px!important;
 }
 
+.navBox{
+    display: flex;
+    flex-direction: column;
+}
+
 .arrows{
-    width: 81px;
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    margin-left: 502px;
+}
+
+.arrow{
+    width: 25px;
 }
 .separatorContact{
-    margin-top: 75px;
+    margin-top: 20px;
     width: 1148px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 144px;
 }
 
 .alsoLike{
-    margin-left: 260px;
-}
+    margin-top: 77px;
+    margin-left: 144px;
+    font-family: "Space Mono";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;}
 
-.leftPicAlsoLike{
-    position: absolute;
-    left: 270px;
+.alsoLikePics{
+    display: flex;
+    margin-left: 144px;
+    gap: 20px;
 }
-
-.rightPicAlsoLike{
-    position: absolute;
-    right:270px;
+.alsoLikePic{
+    width: 564px;
+    height: 495px;
+    object-fit: cover;
 }

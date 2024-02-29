@@ -1,0 +1,38 @@
+.alignForms{
+    display: flex;
+    margin-top: 80px;
+    margin-left: 140px;
+    
+}
+.blockFormsForRight{
+    margin-left: 330px;
+}
+.blockForms{
+    display: flex;
+    gap: 35px;
+}
+.forms{
+    border-width: 1.5px;
+    border-radius: 8px;
+    border-color: #D8D8D8;
+    width:260px;
+    height:44px;
+    font-variant-caps:all-small-caps;
+}
+.picturesList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1148px;
+    height: 2040px;
+    
+    overflow: hidden;
+}
+
+.pictures{
+    object-fit: cover;
+    max-width:564px;
+    max-height:495px;
+    width: auto;
+    height: auto;
+}
