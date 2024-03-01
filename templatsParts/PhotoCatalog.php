@@ -26,18 +26,18 @@
 
 <section class="picturesList">
 <?php
-// Custom query to retrieve 'photos' post type
+
 $args = array(
     'post_type' => 'photo',
-    'posts_per_page' => 8, // Nombre d'articles à afficher
+    'posts_per_page' => 8, 
 );
 
 $photo_query = new WP_Query($args);
 
 if ($photo_query->have_posts()) {
     while ($photo_query->have_posts()) {
-        $photo_query->the_post();       
-?>
+        $photo_query->the_post()       
+        ?>
         <div>
             <?php
            
@@ -45,13 +45,10 @@ if ($photo_query->have_posts()) {
                 the_post_thumbnail('full', array('class' => 'photoCatalogPics'));
             }
             ?>
-            <!-- Ajoutez d'autres balises HTML ou PHP selon vos besoins -->
+            
         </div>
         <?php
     }
-
-    // Réinitialise la requête postdata
-  
 }
 ?>
 </section>
