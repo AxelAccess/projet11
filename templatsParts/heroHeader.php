@@ -6,7 +6,6 @@
         'orderby'        => 'rand', 
     );
 
-
     $photo_query = new WP_Query($args);
 
     if ($photo_query->have_posts()) {

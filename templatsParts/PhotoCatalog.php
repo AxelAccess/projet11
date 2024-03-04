@@ -25,30 +25,50 @@
 </section>
 
 <section class="picturesList">
-<?php
-
-$args = array(
-    'post_type' => 'photo',
-    'posts_per_page' => 8, 
-);
-
-$photo_query = new WP_Query($args);
-
-if ($photo_query->have_posts()) {
-    while ($photo_query->have_posts()) {
-        $photo_query->the_post()       
-        ?>
-        <div>
-            <?php
-           
-            if (has_post_thumbnail()) {
-                the_post_thumbnail('full', array('class' => 'photoCatalogPics'));
-            }
-            ?>
-            
-        </div>
+    <div class="photo-container">
         <?php
-    }
-}
-?>
+        $args = array(
+            'post_type'      => 'photo',
+            'posts_per_page' => 8,
+        );
+
+        $photo_query = new WP_Query($args);
+
+        if ($photo_query->have_posts()) {
+            while ($photo_query->have_posts()) {
+                $photo_query->the_post();
+                if (has_post_thumbnail()) {
+                    the_post_thumbnail('full', array('class' => 'photoCatalogPics'));
+                }
+            }
+            
+        }
+        ?>
+    </div>
+
+    <button id="loadMorePhoto">Charger plus</button>
 </section>
+
+<script>    
+    var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
+    
+    jQuery(document).ready(function ($) {
+        var page = 2; 
+
+        $('#loadMorePhoto').on('click', function () {
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'loadMorePhotos',
+                    page: page,
+                },
+                success: function (response) {
+                    $('.photo-container').append(response);
+                    page++;
+                },
+            });
+        });
+    });
+</script>
+
