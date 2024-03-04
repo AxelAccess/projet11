@@ -46,29 +46,12 @@
         ?>
     </div>
 
-    <button id="loadMorePhoto">Charger plus</button>
+    <button id="loadMorePhoto" 
+    data-ajaxurl="<?php echo admin_url( 'admin-ajax.php' ); ?>" 
+    data-action="loadMorePhotos"
+    data-nonce="<?php echo wp_create_nonce('loadMorePhotos'); ?>">
+    Charger plus</button>
+
 </section>
 
-<script>    
-    var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
-    
-    jQuery(document).ready(function ($) {
-        var page = 2; 
-
-        $('#loadMorePhoto').on('click', function () {
-            $.ajax({
-                url: ajaxurl,
-                type: 'POST',
-                data: {
-                    action: 'loadMorePhotos',
-                    page: page,
-                },
-                success: function (response) {
-                    $('.photo-container').append(response);
-                    page++;
-                },
-            });
-        });
-    });
-</script>
 
