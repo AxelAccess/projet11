@@ -7,8 +7,10 @@ parent.appendChild(darkerBackGround)
 
 let contact = document.querySelector(".menu-item-49")
 let modale = document.querySelector(".contactModale")
+
 contact.addEventListener("click", function() { 
     modale.style.display = "block"
+    darkerBackGround.style.display = "block"
     darkerBackGround.style.backgroundColor = "rgba(0, 0, 0, 0.9)"
     darkerBackGround.style.position = "fixed"
     darkerBackGround.style.top = "0"
@@ -18,5 +20,11 @@ contact.addEventListener("click", function() {
     darkerBackGround.style.zIndex = "1" 
     modale.style.zIndex = "2" 
 })
+
+darkerBackGround.addEventListener("click", function() {
+    modale.style.display = "none"
+    darkerBackGround.style.display = "none"
+})
+
 })
 

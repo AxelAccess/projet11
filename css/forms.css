@@ -1,3 +1,52 @@
 .wpcf7{
-	margin-top: 200px;
+	margin-top: 45px;
+}
+.contactModale{
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 10px;
+    left: 541px;
+    z-index: 9999;
+    width: 600px;
+    height: 769px;
+	text-align: start;
+
+}
+.cssLabel{
+	margin-left: 145px;
+	font-family: "Space Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+textarea {
+	margin-left: 145px;
+	width: 263px;
+	height: 210px;
+	border: 1px solid #B8BBC2;
+	border-radius: 8px;
+
+}
+
+input[type="text" i], input[type="email"] {
+    display: block;
+    margin-left: 145px;
+    width: 263px;
+    height: 40px;
+	border: 1px solid #B8BBC2;
+	border-radius: 8px;
+}
+input[type="submit" i] {
+    display: block;
+    margin-top: 20px;
+	margin-left: 145px;
+	width: 263px;
+	height: 50px;
+	background: #D8D8D8;
+	border: 1px solid #B8BBC2;
+	border-radius: 2px;
 }

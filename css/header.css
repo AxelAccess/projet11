@@ -28,15 +28,3 @@ a:-webkit-any-link {
     margin-left: 146px;
 }
 
-.contactModale{
-    display: none;
-    position: fixed;
-    background-color: white;
-    top: 100px;
-    left: 541px;
-    z-index: 9999;
-    width: 600px;
-    height: 704px;
-    text-align: center;
-}
-
