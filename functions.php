@@ -29,6 +29,7 @@ function theme_enqueue_styles() {
     wp_enqueue_style('twentytwentyone', get_stylesheet_directory_uri(). '/style.css'); 
     wp_enqueue_script('modale', get_stylesheet_directory_uri(). '/scripts/modale.js');
     wp_enqueue_script('morePhotoScript', get_stylesheet_directory_uri(). '/scripts/scriptLoadMorePhoto.js', array("jquery"));
+    wp_enqueue_script('contactReference', get_stylesheet_directory_uri(). '/scripts/contactRef.js', array("jquery"));
 }
 function enqueue_jquery() {
   wp_enqueue_script('jquery');

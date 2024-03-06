@@ -7,11 +7,11 @@
 
         <div>
           <h1 class="descriptionPicsTitle"><?php the_title(); ?></h1>
-          <p class="descriptionPics">Référence : <?php  echo get_field ('reference'); ?></p>
+          <p class="descriptionPics" id="referenceId" >Référence : <?php  echo get_field ('reference'); ?></p>
           <p class="descriptionPics">Catégorie : <?php the_terms(get_the_ID(), 'categorie_photo'); ?></p>
           <p class="descriptionPics">Format : <?php the_terms(get_the_ID(), 'format'); ?></p>
-          <p class="descriptionPics">Type : <?php the_terms(get_the_ID(), 'type_photo'); ?></p>
-          <p class="descriptionPics">Type : <?php echo get_the_date('Y'); ?></p>  
+          <p class="descriptionPics">Type : <?php echo get_field ('type'); ?></p>
+          <p class="descriptionPics">Date : <?php echo get_the_date('Y'); ?></p>  
         </div>
 
         <hr class="wp-block-separator has-alpha-channel-opacity separatorDetailContact">
@@ -24,7 +24,7 @@
 
       <section class="middleSection">
         <p class="insterested">Cette photo vous intéresse ?</p>
-        <button class="contactButton" type="button">Contact</button>
+        <button class="contactButton" type="submit" data-action= "<?php echo get_field('reference'); ?>"> Contact</button>
         <div class="navBox">
         <img class="navPic" src="<?php echo get_stylesheet_directory_uri() ?>/images/PhotosNMota/nathalie-0.jpeg">
           <div class="arrows">
