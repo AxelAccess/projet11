@@ -26,11 +26,17 @@
         <p class="insterested">Cette photo vous intéresse ?</p>
         <button class="contactButton" type="submit" data-action= "<?php echo get_field('reference'); ?>"> Contact</button>
         <div class="navBox">
-        <img class="navPic" src="<?php echo get_stylesheet_directory_uri() ?>/images/PhotosNMota/nathalie-0.jpeg">
-          <div class="arrows">
-          <img class="arrow" src="<?php echo get_stylesheet_directory_uri() ?>/images/leftArrow.png">
-          <img class="arrow" src="<?php echo get_stylesheet_directory_uri() ?>/images/rightArrow.png">
+          <img class="navPic" src="<?php echo get_stylesheet_directory_uri() ?>/images/PhotosNMota/nathalie-0.jpeg">
+
+          <div class="arrows">              
+              <a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>">
+                <img class="arrow" src="<?php echo get_stylesheet_directory_uri() ?>/images/leftArrow.png" alt="Previous Post">
+              </a>           
+              <a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>">
+                <img class="arrow" src="<?php echo get_stylesheet_directory_uri() ?>/images/rightArrow.png" alt="Next Post">
+              </a>          
           </div>
+
         </div>
       </section>
 
