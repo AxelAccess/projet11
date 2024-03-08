@@ -43,14 +43,36 @@
       <hr class="wp-block-separator has-alpha-channel-opacity separatorContact">
 
       <section class="bottomSection">
-      <p class="alsoLike">Vous aimerez aussi</p>
-      <div class="alsoLikePics">
-        <img class="alsoLikePic" src="<?php echo get_stylesheet_directory_uri() ?>/images/PhotosNMota/nathalie-4.jpeg">
-        <img class="alsoLikePic" src="<?php echo get_stylesheet_directory_uri() ?>/images/PhotosNMota/nathalie-5.jpeg">
-      </div>
+        <p class="alsoLike">Vous aimerez aussi</p>
+        <div class="alsoLikePics">
+        
+          <?php
+          $categoriePhoto = get_the_terms(get_the_ID(), 'categorie_photo');
+          $taxonomyPhoto = $categoriePhoto[0]->taxonomy;
+          $args = array(
+            'post_type'      => 'photo',
+            'posts_per_page' => 2,
+            'tax_query'      => array(
+              array(
+                'taxonomy'   => $taxonomyPhoto,
+                'field'      => 'id',
+                'terms'      => wp_list_pluck($categoriePhoto, 'term_id'),           
+              ),
+            ),
+            'orderby'        => 'rand',
+          );
+          $relatedPhotosQuery = new WP_Query($args);
+          if ($relatedPhotosQuery->have_posts()) :
+            while ($relatedPhotosQuery->have_posts()) : $relatedPhotosQuery->the_post();
+              ?>              
+              <img class="alsoLikePic" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">              
+              <?php
+            endwhile;
+          endif;
+          ?>
+
+        </div>
       </section>
-
     </article>
-
   <?php endwhile; endif; ?>
 <?php get_footer(); ?>
