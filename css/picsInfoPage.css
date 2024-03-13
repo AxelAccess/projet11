@@ -1,27 +1,34 @@
 .topSection{
     display: flex;
+    justify-content: center;
 }
 .mainPics{
     padding-top: 38px;
-    margin-left: 141px;
+    margin-left: 21px;
     width: 563px;
     height: 844px;
     object-fit: cover;
 }
+
+.descriptionBlock{
+    width: 564px;
+    margin-top: -49px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+
+}
 .descriptionPicsTitle{
-    width: 300px;
+    width: 420px;
     margin-bottom: 0px;
     padding-top: 525px;
-    margin-left: 145px;
     font-family: "Space Mono";
     font-size: 66px;
     font-style: italic;
     font-weight: 400;
-    line-height: 58px; /* 87.879% */
+    line-height: 70px;
     text-transform: uppercase;
 }
 .descriptionPics{
-    margin-left: 145px;
     font-family: "Space Mono";
     font-size: 14px;
     font-style: normal;
@@ -31,30 +38,29 @@
     text-transform: uppercase;
 }
 .separatorDetailContact{
-    position: absolute;
     width: 564px;
-    margin-left: 144px;
-    top: 990px;
+    padding-left: 10px;
 }
 .middleSection{
     display: flex;
-    align-items: center;
-    padding-top: 48px;
+    justify-content: center;
 }
-.insterested{
+.borderBottom{
     display: flex;
-    width: 197px;
-    margin-left: 144px;
-   
+    align-items: center;
+    border-bottom: 1px solid black;
+    
 }
+   
+
 .contactButton{
     display: flex;
     width: 272px;
     height: 50px;
     justify-content: center;
     align-items: center;
-    margin-left: 96px;
-
+    margin-left: 111px;
+    margin-right: 505px;
     border-radius: 2px;
     border-color: white;
     background: #D8D8D8;
@@ -66,22 +72,23 @@
 }
 
 .navPic{
-    margin-top: -8px;
-    margin-left: 502px;
     width: 81px!important;
     height: 71px!important;
 }
-
+#hoverImage {
+    object-fit: cover;
+}
 .navBox{
     display: flex;
     flex-direction: column;
+    padding-bottom: 21px;
+
 }
 
 .arrows{
     display: flex;
-    margin-top: 20px;
+    margin-top: 19px;
     gap: 30px;
-    margin-left: 502px;
 }
 
 .arrow{
@@ -94,8 +101,11 @@
 }
 
 .alsoLike{
+    display: flex;
+    justify-content: center;  
     margin-top: 77px;
-    margin-left: 144px;
+    padding-right: 923px;
+    margin-bottom: 52px;
     font-family: "Space Mono";
     font-size: 18px;
     font-style: normal;
@@ -106,8 +116,9 @@
 
 .alsoLikePics{
     display: flex;
-    margin-left: 144px;
-    gap: 20px;
+    justify-content: center;
+    gap: 20px;   
+    margin-bottom: 110px;
 }
 .alsoLikePic{
     width: 564px;

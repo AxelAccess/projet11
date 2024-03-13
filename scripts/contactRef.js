@@ -20,17 +20,14 @@ jQuery(document).ready(function ($) {
         modale.style.zIndex = "2"  
         
         //Réference
-        const referenceElement = document.getElementById('referenceId')
-        var referenceValue = referenceElement.textContent.replace('Référence : ', '')
-        const refPhotoField = document.getElementById('refPhoto')
+        let referenceElement = document.getElementById('referenceId')
+        let referenceValue = referenceElement.textContent.replace('Référence : ', '')
+        let refPhotoField = document.getElementById('refPhoto')
         refPhotoField.value = referenceValue;
-
 
     })
     darkerBackGround.addEventListener("click", function() {
         modale.style.display = "none"
         darkerBackGround.style.display = "none"
     })
-
-    
     })

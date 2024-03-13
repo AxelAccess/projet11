@@ -1,6 +1,6 @@
 <?php 
 get_header();
-include 'templatsParts/heroHeader.php';
-include 'templatsParts/PhotoCatalog.php';
-include 'templatsParts/loadMorePhoto.php';
+get_template_part('templatsParts/heroHeader');
+get_template_part('templatsParts/PhotoCatalog');
+get_template_part('templatsParts/loadMorePhoto');
 get_footer();
