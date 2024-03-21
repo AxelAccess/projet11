@@ -1,7 +1,7 @@
 .alignForms{
     display: flex;
+    justify-content: center;
     margin-top: 80px;
-    margin-left: 140px;
     
 }
 .blockFormsForRight{
@@ -19,29 +19,86 @@
     height:44px;
     font-variant-caps:all-small-caps;
 }
-.picturesList{
+.hiddenOption{
+    display: none;
+}
+.centerButton{
     display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#loadMorePhoto{
+    display: flex;
+    width: 272px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border-color: white;
+    background: #D8D8D8;
+
+    font-family: "Space Mono";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.photo-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-left: 140px;
     margin-top: 41px;
 
+}
+.display{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -54px;
 
 }
-.photo-container{
-    
+.fixhover{
+    position: relative;
 }
 
+#infoPhoto{
+    position: absolute;
+}
+.hide{
+    display: none;
+}
 
+.refPhoto, .catPhoto{
+    color: white!important;
+    filter: brightness(100%)!important;
+}
 
-.photoCatalogPics{
-    object-fit: cover;
-    max-width:564px;
-    max-height:495px;
-    min-width:564px;
-    min-height:495px;
-    width: auto;
-    height: auto;
-    margin-right: 20px;
-    margin-bottom: 20px;
+.refPhoto{
+    margin-left:17px;
+}
+.catPhoto{
+    margin-right:23px;
+}
+.eyeIco{
+    height:34px;
+    width: 34px;
+    z-index:1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.fullScreenIco{
+    height:31px;
+    width: 46px;
+    z-index:1;
+    position: absolute;
+    top: 11px;
+    right: 18px;
+}
+.darkerBackground{
+    background-Color: rgba(0, 0, 0, 0.9);
 }

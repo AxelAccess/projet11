@@ -1,22 +1,19 @@
-
-jQuery(document).ready(function ($) {
-    var page = 2;
-    var btn = document.querySelector('#loadMorePhoto') 
-    var ajaxurl = btn.dataset.ajaxurl
-    console.log(ajaxurl)
-    $('#loadMorePhoto').on('click', function () {
-       
+jQuery(document).ready(function($) {
+    $('#loadMorePhoto').click(function() {
+        var ajaxurl = $(this).data('ajaxurl');
         $.ajax({
-            url: ajaxurl,
             type: 'POST',
+            url: ajaxurl,
             data: {
-                action: btn.dataset.action,
-                page: page,
+                action: 'loadMorePhotos',
+                offset: $('.fixhover').length
             },
-            success: function (response) {
+            success: function(response) {
                 $('.photo-container').append(response);
-                page++;
             },
+            error: function() {
+                console.log('Erreur lors du chargement des photos supplémentaires.');
+            }
         });
     });
 });

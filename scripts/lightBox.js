@@ -1,23 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
+    document.body.addEventListener("mouseover", function(event) {
+        if(event.target.closest(".fixhover")) {
+            let lightbox = event.target.closest(".fixhover");
+            let img = lightbox.querySelector('.alsoLikePic');
+            let infoPhotoId = img.getAttribute('data-infoPhoto');
+            let info = document.getElementById(infoPhotoId);
+            info.classList.remove("hide");
+            info.classList.add("display");
+            img.style.filter = "brightness(50%)";
+        }
+    });
 
-    let darkerBackGround = document.createElement("div")
-    darkerBackGround.id = "darkerBackGround"
-    let parent = document.querySelector("body")
-    parent.appendChild(darkerBackGround)
-
-    let lightbox = document.querySelector(".alsoLikePic")
-    lightbox.addEventListener("click", function() { 
-        darkerBackGround.style.display = "block"
-        darkerBackGround.style.backgroundColor = "rgba(0, 0, 0, 0.9)"
-        darkerBackGround.style.position = "fixed"
-        darkerBackGround.style.top = "0"
-        darkerBackGround.style.left = "0"
-        darkerBackGround.style.width = "100%"
-        darkerBackGround.style.height = "100%"
-        darkerBackGround.style.zIndex = "1" 
-        modale.style.zIndex = "2" 
-    })
-
-})
-
-
+    document.body.addEventListener("mouseout", function(event) {
+        if(event.target.closest(".fixhover")) {
+            let lightbox = event.target.closest(".fixhover");
+            let img = lightbox.querySelector('.alsoLikePic');
+            let infoPhotoId = img.getAttribute('data-infoPhoto');
+            let info = document.getElementById(infoPhotoId);
+            info.classList.remove("display");
+            info.classList.add("hide");
+            img.style.filter = "brightness(100%)";
+        }
+    });
+});

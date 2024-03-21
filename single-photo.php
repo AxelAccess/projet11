@@ -62,13 +62,11 @@
             'orderby'        => 'rand',
           );
           $relatedPhotosQuery = new WP_Query($args);
-          if ($relatedPhotosQuery->have_posts()) :
             while ($relatedPhotosQuery->have_posts()) : $relatedPhotosQuery->the_post();
               ?>              
               <img class="alsoLikePic" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">              
               <?php
             endwhile;
-          endif;
           ?>
         </div>
       </section>

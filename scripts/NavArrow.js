@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     let leftArrow = document.querySelector(".leftArrow");
 
-    leftArrow.addEventListener("mouseenter", function(){
+    leftArrow.addEventListener("mouseover", function(){
         let postId = leftArrow.getAttribute("data-id");
 
         jQuery.ajax({
@@ -11,17 +11,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 action: 'hoverPhoto',
                 post_id: postId 
             },
-            success: function(response) {
-                
-                console.log(response);
-
-                
+            success: function(response) {               
                 let imageElement = document.querySelector("#hoverImage");
-                 imageElement.src = response;
+                imageElement.src = response;
                 
             }
         });
     });
+
     let rightArrow = document.querySelector(".rightArrow");
 
     rightArrow.addEventListener("mouseenter", function(){
@@ -34,13 +31,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 action: 'hoverPhoto',
                 post_id: postId 
             },
-            success: function(response) {
-                
-                console.log(response);
-
-                
+            success: function(response) {  
                 let imageElement = document.querySelector("#hoverImage");
-                 imageElement.src = response;
+                imageElement.src = response;
                 
             }
         });
