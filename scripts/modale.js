@@ -25,20 +25,34 @@ document.addEventListener("DOMContentLoaded", function() {
         modale.style.display = "none"
         contactModal.style.display = "none"
     })
+ 
     
-    let lightbox = document.querySelector(".lightbox")
-    let closeLightbox = document.querySelector(".close")
-
-   
+    let lightbox = document.querySelector(".lightbox");
+    let closeLightbox = document.querySelector(".close");
+    
     document.body.addEventListener("click", function(event) {
         if (event.target.closest(".fullScreenIco")) {
-            lightbox.style.display = "flex"
+            let photoElement = event.target.closest(".fixhover").querySelector("img");
+            let photoURL = photoElement.src;
+            let ref = photoElement.getAttribute("data-ref");
+            let cat = photoElement.getAttribute("data-cat");
+    
+            // Mettez à jour l'élément image dans la lightbox avec l'URL de l'image
+            let lightboxPhotoElement = lightbox.querySelector(".lightBoxPic");
+            lightboxPhotoElement.src = photoURL;
+    
+            // Mettez à jour les informations de référence et de catégorie dans la lightbox
+            document.getElementById("lightboxRef").textContent = ref;
+            document.getElementById("lightboxCat").textContent = cat;
+            console.log(ref, cat);
+            lightbox.style.display = "flex";
         }
     })
-
+    
     closeLightbox.addEventListener("click", function() {
-        lightbox.style.display = "none"
+        lightbox.style.display = "none";
     })
+    
 })
 
 

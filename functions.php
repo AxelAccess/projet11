@@ -4,7 +4,8 @@
     }
     function theme_enqueue_styles() {
         wp_enqueue_style('twentytwentyone', get_stylesheet_directory_uri(). '/style.css'); 
-        wp_enqueue_script('modale', get_stylesheet_directory_uri(). '/scripts/modale.js');
+        wp_enqueue_script('modale', get_stylesheet_directory_uri(). '/scripts/modale.js', array("jquery"));
+        wp_localize_script('modale', 'ajax_object', array('ajaxurl' => admin_url('admin-ajax.php')));
         wp_enqueue_script('morePhotoScript', get_stylesheet_directory_uri(). '/scripts/scriptLoadMorePhoto.js', array("jquery"));
         wp_localize_script('morePhotoScript', 'ajax_object', array('ajaxurl' => admin_url('admin-ajax.php')));
         wp_enqueue_script('contactReference', get_stylesheet_directory_uri(). '/scripts/contactRef.js', array("jquery"));
@@ -20,6 +21,8 @@
 
   //**Page principale**\\
 
+
+  
   function loadMorePhotos() {
 
     $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
