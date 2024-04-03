@@ -1,32 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    let contactModal = document.createElement("div")
-    contactModal.id = "contactModal"
-    let parent = document.querySelector("body")
-    parent.appendChild(contactModal)
 
-    let contact = document.querySelector(".menu-item-49")
-    let modale = document.querySelector(".contactModale")
 
-    contact.addEventListener("click", function() { 
-        modale.style.display = "block"
-        contactModal.style.display = "block"
-        contactModal.style.backgroundColor = "rgba(0, 0, 0, 0.9)"
-        contactModal.style.position = "fixed"
-        contactModal.style.top = "0"
-        contactModal.style.left = "0"
-        contactModal.style.width = "100%"
-        contactModal.style.height = "100%"
-        contactModal.style.zIndex = "1" 
-        modale.style.zIndex = "2" 
-    })
-
-    contactModal.addEventListener("click", function() {
-        modale.style.display = "none"
-        contactModal.style.display = "none"
-    })
  
     
+
+    let photos = document.querySelectorAll(".fixhover");
+    let positionPhoto = 0;
+
     let lightbox = document.querySelector(".lightbox");
     let closeLightbox = document.querySelector(".close");
     
@@ -36,23 +17,75 @@ document.addEventListener("DOMContentLoaded", function() {
             let photoURL = photoElement.src;
             let ref = photoElement.getAttribute("data-ref");
             let cat = photoElement.getAttribute("data-cat");
-    
-            // Mettez à jour l'élément image dans la lightbox avec l'URL de l'image
             let lightboxPhotoElement = lightbox.querySelector(".lightBoxPic");
             lightboxPhotoElement.src = photoURL;
-    
-            // Mettez à jour les informations de référence et de catégorie dans la lightbox
             document.getElementById("lightboxRef").textContent = ref;
             document.getElementById("lightboxCat").textContent = cat;
             console.log(ref, cat);
             lightbox.style.display = "flex";
+
         }
     })
-    
+    let links = document.querySelectorAll(".catPhoto a");
+    links.forEach(function(link) {
+    link.classList.add('whiteCat'); 
+    });
+
     closeLightbox.addEventListener("click", function() {
         lightbox.style.display = "none";
     })
     
+   
+    leftArrow.addEventListener("click", function(e){
+        let photosArray = Array.from(photos);
+        
+        // Trouver l'index de la photo actuellement affichée
+        let photoCourante = document.querySelector(".lightBoxPic").src;
+        let positionPhotoCourante = photosArray.findIndex(photo => photo.querySelector("img").src === photoCourante);
+        
+        // Incrémenter l'index de la photo actuellement affichée
+        positionPhotoCourante = (positionPhotoCourante - 1) % photosArray.length;
+        
+        // Mettre à jour les éléments de la lightbox avec les données de la nouvelle photo
+        let photoSuivante = photosArray[positionPhotoCourante];
+        let photoElement = photoSuivante.querySelector("img");
+        let photoURL = photoElement.src;
+        let ref = photoElement.getAttribute("data-ref");
+        let cat = photoElement.getAttribute("data-cat");
+        let lightboxPhotoElement = lightbox.querySelector(".lightBoxPic");
+        lightboxPhotoElement.src = photoURL;
+        document.getElementById("lightboxRef").textContent = ref;
+        document.getElementById("lightboxCat").textContent = cat;
+        
+        console.log(ref, cat);
+        lightbox.style.display = "flex";
+    });
+    
+    rightArrow.addEventListener("click", function(e) {
+        // Convertir NodeList en tableau
+        let photosArray = Array.from(photos);
+        
+        // Trouver l'index de la photo actuellement affichée
+        let photoCourante = document.querySelector(".lightBoxPic").src;
+        let positionPhotoCourante = photosArray.findIndex(photo => photo.querySelector("img").src === photoCourante);
+        
+        // Incrémenter l'index de la photo actuellement affichée
+        positionPhotoCourante = (positionPhotoCourante + 1) % photosArray.length;
+        
+        // Mettre à jour les éléments de la lightbox avec les données de la nouvelle photo
+        let photoSuivante = photosArray[positionPhotoCourante];
+        let photoElement = photoSuivante.querySelector("img");
+        let photoURL = photoElement.src;
+        let ref = photoElement.getAttribute("data-ref");
+        let cat = photoElement.getAttribute("data-cat");
+        let lightboxPhotoElement = lightbox.querySelector(".lightBoxPic");
+        lightboxPhotoElement.src = photoURL;
+        document.getElementById("lightboxRef").textContent = ref;
+        document.getElementById("lightboxCat").textContent = cat;
+        
+        console.log(ref, cat);
+        lightbox.style.display = "flex";
+    });
 })
 
 

@@ -1,6 +1,4 @@
 <?php 
-get_header();
-get_template_part('templatsParts/heroHeader');
-get_template_part('templatsParts/PhotoCatalog');
-get_template_part('templatsParts/loadMorePhoto');
+get_header();  
+echo "<h1> je suis sur l'index </h1>";
 get_footer();

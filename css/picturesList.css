@@ -80,6 +80,9 @@
 .catPhoto{
     margin-right:23px;
 }
+.whiteCat{
+    color: white!important;
+}
 .eyeIco{
     height:34px;
     width: 34px;

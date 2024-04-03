@@ -1,33 +1,38 @@
 jQuery(document).ready(function ($) {
-    let contactButton = document.querySelector(".contactButton")
-    let darkerBackGround = document.createElement("div")
-    darkerBackGround.id = "darkerBackGround"
-    let parent = document.querySelector("body")
-    parent.appendChild(darkerBackGround)
-    
+   
+
+    let contact = document.querySelector(".menu-item-49")
     let modale = document.querySelector(".contactModale")
-    
-    contactButton.addEventListener("click", function() { 
+    let background = document.querySelector(".darkbackground")
+    contact.addEventListener("click", function() { 
         modale.style.display = "block"
-        darkerBackGround.style.display = "block"
-        darkerBackGround.style.backgroundColor = "rgba(0, 0, 0, 0.9)"
-        darkerBackGround.style.position = "fixed"
-        darkerBackGround.style.top = "0"
-        darkerBackGround.style.left = "0"
-        darkerBackGround.style.width = "100%"
-        darkerBackGround.style.height = "100%"
-        darkerBackGround.style.zIndex = "1" 
-        modale.style.zIndex = "2"  
+        background.style.display = "block"
+        
+    })
+
+    background.addEventListener("click", function() {
+        modale.style.display = "none"
+        background.style.display = "none"
+    })
+    
+    let contactRefButton = document.querySelector(".contactButton")
+    
+    contactRefButton.addEventListener("click", function() { 
+        modale.style.display = "block"
+        background.style.display = "block"
+
         
         //Réference
-        let referenceElement = document.getElementById('referenceId')
-        let referenceValue = referenceElement.textContent.replace('Référence : ', '')
-        let refPhotoField = document.getElementById('refPhoto')
+        const referenceElement = document.getElementById('referenceId')
+        var referenceValue = referenceElement.textContent.replace('Référence : ', '')
+        const refPhotoField = document.getElementById('refPhoto')
         refPhotoField.value = referenceValue;
 
     })
-    darkerBackGround.addEventListener("click", function() {
+    background.addEventListener("click", function() {
         modale.style.display = "none"
-        darkerBackGround.style.display = "none"
+        background.style.display = "none"
     })
+
+    
     })

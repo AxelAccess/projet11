@@ -42,32 +42,28 @@
 
       <section class="bottomSection">
         <p class="alsoLike">Vous aimerez aussi</p>
-        <div class="alsoLikePics">
+        <div class="alsoLikePics"><?php
         
-          <?php
           $ids = array(get_the_ID());
-          $categoriePhoto = get_the_terms(get_the_ID(), 'categorie_photo');
+          $categoriePhoto = get_the_terms(get_the_ID(), 'categorie_photo');        
           $taxonomyPhoto = $categoriePhoto[0]->taxonomy;
           $args = array(
-            'post_type'      => 'photo',
-            'posts_per_page' => 2,
-            'post__not_in'   => $ids,
-            'tax_query'      => array(
-              array(
-                'taxonomy'   => $taxonomyPhoto,
-                'field'      => 'id',
-                'terms'      => wp_list_pluck($categoriePhoto, 'term_id'),           
+              'post_type'      => 'photo',
+              'posts_per_page' => 2,
+              'post__not_in'   => $ids,
+              'tax_query'      => array(
+                  array(
+                      'taxonomy'   => $taxonomyPhoto,
+                      'field'      => 'id',
+                      'terms'      => wp_list_pluck($categoriePhoto, 'term_id'),           
+                  ),
               ),
-            ),
-            'orderby'        => 'rand',
+              'orderby'        => 'rand',
           );
           $relatedPhotosQuery = new WP_Query($args);
-            while ($relatedPhotosQuery->have_posts()) : $relatedPhotosQuery->the_post();
-              ?>              
-              <img class="alsoLikePic" src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>">              
-              <?php
-            endwhile;
-          ?>
+          while ($relatedPhotosQuery->have_posts()) : $relatedPhotosQuery->the_post();
+          get_template_part('templatsParts/PhotoCatalog');
+          endwhile; ?>
         </div>
       </section>
     </article>

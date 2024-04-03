@@ -1,5 +1,6 @@
 jQuery(document).ready(function($) {
     $('#loadMorePhoto').click(function() {
+        
         var ajaxurl = $(this).data('ajaxurl');
         $.ajax({
             type: 'POST',
@@ -10,6 +11,11 @@ jQuery(document).ready(function($) {
             },
             success: function(response) {
                 $('.photo-container').append(response);
+                let links = document.querySelectorAll(".catPhoto a");
+                links.forEach(function(link) {
+                link.classList.add('whiteCat'); 
+               
+            });
             },
             error: function() {
                 console.log('Erreur lors du chargement des photos supplémentaires.');

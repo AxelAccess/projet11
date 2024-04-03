@@ -1,4 +1,8 @@
-<div>
+<div class="divHeroHeader">
+    <div class="titleHeader">
+        <img class="picTitleHeader" src="<?php echo get_stylesheet_directory_uri() ?>/images/TitreHeader.png">
+    </div>
+
     <?php    
     $args = array(
         'post_type'      => 'photo',
@@ -14,5 +18,8 @@
         echo '<img src="' . $photo_url . '" alt="heroHeader" class="heroHeader">';
     }
     ?>
-    <img class="titleHeader" src="<?php echo get_stylesheet_directory_uri() ?>/images/TitreHeader.png">
+
+    <div class="titleHeader">
+        <img class="picTitleHeader" src="<?php echo get_stylesheet_directory_uri() ?>/images/TitreHeader.png">
+    </div>
 </div>
