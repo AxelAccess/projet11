@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     $('#eventSelect').change(function() {
-        var categoryId = $(this).val();
+        let categoryId = $(this).val();
         if (categoryId) {
             $.ajax({
                 type: 'GET',
@@ -13,11 +13,9 @@ jQuery(document).ready(function($) {
                     $('#photo-container').html(response);
                     let links = document.querySelectorAll(".catPhoto a");
                     links.forEach(function(link) {
-                        link.classList.add('whiteCat'); 
-                       
+                        link.classList.add('whiteCat');                       
                     });
-                },
-                
+                },               
             });
         }
     });
@@ -25,7 +23,7 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
     $('#formatSelect').change(function() {
-        var formatId = $(this).val();
+        let formatId = $(this).val();
         if (formatId) {
             $.ajax({
                 type: 'GET',
@@ -38,11 +36,9 @@ jQuery(document).ready(function($) {
                     $('#photo-container').html(response);
                     let links = document.querySelectorAll(".catPhoto a");
                     links.forEach(function(link) {
-                        link.classList.add('whiteCat'); 
-                       
+                        link.classList.add('whiteCat');                       
                     });
-                },
-                
+                },               
             });
         }
     });
@@ -50,7 +46,7 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
     $('#publishSelect').change(function() {
-        var publishId = $(this).val();
+        let publishId = $(this).val();
         if (publishId) {
             $.ajax({
                 type: 'GET',
@@ -63,8 +59,7 @@ jQuery(document).ready(function($) {
                     $('#photo-container').html(response);
                     let links = document.querySelectorAll(".catPhoto a");
                     links.forEach(function(link) {
-                        link.classList.add('whiteCat'); 
-                       
+                        link.classList.add('whiteCat');                       
                     });
                 },
             });

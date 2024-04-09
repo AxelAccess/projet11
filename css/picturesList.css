@@ -37,7 +37,6 @@
     border-radius: 2px;
     border-color: white;
     background: #D8D8D8;
-
     font-family: "Space Mono";
     font-size: 12px;
     font-style: normal;
@@ -58,7 +57,7 @@
     margin-top: -54px;
 
 }
-.fixhover{
+.overlay{
     position: relative;
 }
 

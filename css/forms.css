@@ -1,10 +1,13 @@
 .wpcf7{
 	margin-top: 45px;
 }
-.contactModale{
+.contactWindow{
     display: none;
     position: fixed;
     background-color: white;
+    border: 5px;
+    border-style: solid;
+    border-color: black;
     top: 10px;
     left: 541px;
     z-index: 9999;
@@ -12,6 +15,9 @@
     height: 769px;
 	text-align: start;
 
+}
+.modalDeco{
+    width: 400px;
 }
 .cssLabel{
 	margin-left: 145px;

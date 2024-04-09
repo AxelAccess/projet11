@@ -1,20 +1,21 @@
 .topSection{
     display: flex;
     justify-content: center;
+    gap: 21px;
+}
+.blocMainPic{
+    width: 50%;
+    margin-top: 38px;
 }
 .mainPics{
-    padding-top: 38px;
-    margin-left: 21px;
-    width: 563px;
-    height: 844px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-
 .descriptionBlock{
-    width: 564px;
-    margin-top: -49px;
+    width: 50%;
     border-bottom: 1px solid black;
-    margin-bottom: 5px;
+    padding-bottom: 10px;
 
 }
 .descriptionPicsTitle{
@@ -36,31 +37,35 @@
     line-height: normal;
     letter-spacing: 1.4px;
     text-transform: uppercase;
+    line-height: 2.5;
 }
-.separatorDetailContact{
-    width: 564px;
-    padding-left: 10px;
-}
+
 .middleSection{
     display: flex;
     justify-content: center;
+    border-bottom: 1px solid black;
 }
-.borderBottom{
+.leftMiddleSection, .rightMiddleSection{
+    width: 50%;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
-    
+    gap: 50px;
 }
-   
+.rightMiddleSection{
+    justify-content: flex-end;
+    margin-top: 8px;
+}
 
+.insterested{
+    font-family: "Space Mono";
+    font-size: 14px;
+}
 .contactButton{
     display: flex;
     width: 272px;
     height: 50px;
     justify-content: center;
     align-items: center;
-    margin-left: 111px;
-    margin-right: 505px;
     border-radius: 2px;
     border-color: white;
     background: #D8D8D8;
@@ -70,7 +75,6 @@
     font-style: normal;
     font-weight: 400;
 }
-
 .navPic{
     width: 81px!important;
     height: 71px!important;
@@ -84,27 +88,21 @@
     padding-bottom: 21px;
 
 }
-
 .arrows{
     display: flex;
     margin-top: 19px;
     gap: 30px;
 }
-
 .arrow{
     width: 25px;
 }
-.separatorContact{
-    margin-top: 20px;
-    width: 1148px;
-    margin-left: 144px;
-}
+
 
 .alsoLike{
     display: flex;
-    justify-content: center;  
+    justify-content: left;  
     margin-top: 77px;
-    padding-right: 923px;
+    padding-left: 265px;
     margin-bottom: 52px;
     font-family: "Space Mono";
     font-size: 18px;
@@ -125,4 +123,3 @@
     height: 495px;
     object-fit: cover;
 }
-

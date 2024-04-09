@@ -1,19 +1,34 @@
 html{
-    margin-top: -16px !important;
+    margin-top: -14px !important;
 }
 
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+      /* Menu */
+.logo{
+    position: absolute;
+    padding-top: 34px;
+    margin-left: 146px;
+}
+
+/* Bandeau blanc du menu */
 .menu-header-container{
     background-color: white;
     height: 80px;
     box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
 }
+/* Navigation du menu */
 #menu-header{
     list-style-type: none;
     display: flex;
     justify-content: center;
     gap: 45px;
     margin-left: 800px;
-    padding-top: 34px;
+    padding-top: 29px;
+    font-family: "Space Mono";
 }
 a:-webkit-any-link {
     text-decoration: none;
@@ -22,10 +37,14 @@ a:-webkit-any-link {
     font-weight: 500;
 }
 
-.logo{
-    position: absolute;
-    padding-top: 34px;
-    margin-left: 146px;
+/* Modale contacte */
+.darkbackground{
+    display: none; 
+    background-Color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-Index: 1;         
 }
-
-

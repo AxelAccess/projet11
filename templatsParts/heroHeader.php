@@ -16,10 +16,5 @@
         $random_photo = $photo_query->posts[array_rand($photo_query->posts)];
         $photo_url = wp_get_attachment_image_src(get_post_thumbnail_id($random_photo->ID), 'full')[0];
         echo '<img src="' . $photo_url . '" alt="heroHeader" class="heroHeader">';
-    }
-    ?>
-
-    <div class="titleHeader">
-        <img class="picTitleHeader" src="<?php echo get_stylesheet_directory_uri() ?>/images/TitreHeader.png">
-    </div>
+    }?>
 </div>

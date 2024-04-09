@@ -1,3 +1,4 @@
+/* Menu */
 #menu-footer{
     border-top: 1.3px solid black;
     list-style-type: none;
@@ -6,6 +7,8 @@
     gap: 45px;
 }
 
+            /* LightBox */
+/* Effet assombrissant de la lightbox */
 .lightbox{
     display: none;
     align-items: center;
@@ -17,61 +20,52 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-Index: 1;
-           
+    z-Index: 1;       
 }
-.darkbackground{
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-Color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-Index: 1;
-           
-}
-.lightBoxArrowsPhoto{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    z-Index: 1;
-}
-.lightBoxPic{
-    
-    margin-top: 50px;
+/* Photo de la lightbox */
+.lightBoxPic{ 
+    margin-top: 20px;
     object-fit: contain;
     max-width: 1100px;
-    max-height: 700px;
+    max-height: 650px;
 }
+
+/* InfoPhoto de la lightbox */
 .infoPhotoLightBox{
     display: flex;
     flex-direction: row;
     gap: 573px;
 }
+
+/* Couleur infoPhoto de la lightbox */
 .lightBoxRefPhoto{
     color: white;
 }
 .lightBoxCatPhoto{
     color: white;
 }
+
+/* Flèche de la lightbox */
+.lightBoxArrowsPhoto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    z-Index: 1;
+}
 .lightBoxArrow{
     margin: 50px;
 }
-.arrowLeftText{
+.arrowLeftText, .arrowRightText{
     display: flex;
     color: white;
     gap: 20px;
+    cursor: pointer;
 }
-.arrowRightText{
-    display: flex;
-    color: white;
-    gap: 20px;
-}
+
+
+/* Croix de la lightbox */
 .close {
     position: absolute;
     right: 32px;
@@ -90,6 +84,7 @@
     height: 33px;
     width: 2px;
     background-color: white;
+    
   }
   .close:before {
     transform: rotate(45deg);
