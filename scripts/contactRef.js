@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
         
         //Réference
         let referenceElement = document.getElementById('referenceId')
-        let referenceValue   = referenceElement.textContent.replace('Référence : ', '')
         let refPhotoField    = document.getElementById('refPhoto')
+        let referenceValue   = referenceElement.textContent.replace('Référence : ', '')        
         refPhotoField.value  = referenceValue;
     })
 })

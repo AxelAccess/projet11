@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let postId = leftArrow.getAttribute("data-id");
 
         jQuery.ajax({
-            type: 'POST',
+            type: 'GET',
             url: ajax_object.ajaxurl,
             data: {
                 action: 'hoverPhoto',
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let postId = rightArrow.getAttribute("data-id");
 
         jQuery.ajax({
-            type: 'POST',
+            type: 'GET',
             url: ajax_object.ajaxurl,
             data: {
                 action: 'hoverPhoto',
@@ -35,6 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 imageElement.src = response;               
             }
         });
-});
+    });
 });
 

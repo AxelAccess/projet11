@@ -20,22 +20,22 @@
       <section class="middleSection container">
         <div class="leftMiddleSection">
           <p class="insterested">Cette photo vous intéresse ?</p>
-          <button class="contactButton" type="submit" data-action="<?php echo get_field('reference'); ?>"> Contact</button>
+          <button class="contactButton" type="submit"> Contact</button>
         </div>
           <div class= "rightMiddleSection">
             <div class="navBox">           
-              <img id="hoverImage" class="navPic" src="<?php echo get_the_post_thumbnail_url(get_adjacent_post_loop(true)->ID, 'full');?>">  
+              <img id="hoverImage" class="navPic" src="<?php echo get_the_post_thumbnail_url(get_adjacent_post_loop(true)->ID, 'thumbnail');?>">  
               <div class="arrows">              
                 <a  class="leftArrow" 
                     data-id="<?php echo get_adjacent_post_loop(false)->ID;?>" 
                     href="<?php echo get_permalink(get_adjacent_post_loop(false)); ?>">
                     <img class="arrow" src="<?php echo get_stylesheet_directory_uri() ?>/images/leftArrow.png" alt="Previous Post">
-                </a>           
+                </a>
                 <a  class="rightArrow" 
                     data-id="<?php echo get_adjacent_post_loop(true)->ID;?>" 
                     href="<?php echo get_permalink(get_adjacent_post_loop(true)); ?>">
                     <img class="arrow" src="<?php echo get_stylesheet_directory_uri() ?>/images/rightArrow.png" alt="Next Post">
-                </a>      
+                </a>
               </div>
             </div>
           </div>
@@ -44,18 +44,18 @@
       <section class="bottomSection">
         <p class="alsoLike">Vous aimerez aussi</p>
         <div class="alsoLikePics"><?php
-          $ids = array(get_the_ID());
-          $categoriePhoto = get_the_terms(get_the_ID(), 'categorie_photo');        
-          $taxonomyPhoto = $categoriePhoto[0]->taxonomy;
+          $idNotIn = array(get_the_ID());
+          $photoCategorie = get_the_terms(get_the_ID(), 'categorie_photo');        
+          $taxonomyPhoto = $photoCategorie[0]->taxonomy;
           $args = array(
               'post_type'      => 'photo',
               'posts_per_page' => 2,
-              'post__not_in'   => $ids,
+              'post__not_in'   => $idNotIn,
               'tax_query'      => array(
                   array(
                       'taxonomy'   => $taxonomyPhoto,
                       'field'      => 'id',
-                      'terms'      => wp_list_pluck($categoriePhoto, 'term_id'),           
+                      'terms'      => wp_list_pluck($photoCategorie, 'term_id'),           
                   ),
               ),
               'orderby'        => 'rand',

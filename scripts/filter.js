@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-    $('#eventSelect').change(function() {
+    $('#photoCategorySelect').change(function() {
         let categoryId = $(this).val();
         if (categoryId) {
             $.ajax({
@@ -11,11 +11,12 @@ jQuery(document).ready(function($) {
                 },
                 success: function(response) {
                     $('#photo-container').html(response);
+                    
                     let links = document.querySelectorAll(".catPhoto a");
                     links.forEach(function(link) {
-                        link.classList.add('whiteCat');                       
+                        link.classList.add('whiteCat');
                     });
-                },               
+                },
             });
         }
     });

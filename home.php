@@ -5,17 +5,16 @@ get_template_part('templatsParts/heroHeader');
 
 <section class="alignForms">
     <div class=blockForms>
-        <select id="eventSelect" name="event" class="forms">
-            <option value="categoriesPhoto" disabled selected class="hiddenOption">Catégories</option>
+        <select id="photoCategorySelect" name="event" class="forms">
+            <option value="photoCategories" disabled selected class="hiddenOption">Catégories</option>
             <?php 
-            $categoriesPhoto = get_categories(
+            $photoCategories = get_categories(
                 array(
-                    'taxonomy' => 'categorie_photo',
-                    'hide_empty' => false,   
+                    'taxonomy' => 'categorie_photo',  
                 )
             ); 
-            foreach($categoriesPhoto as $categoriePhoto):?>
-            <option value="<?php echo $categoriePhoto->term_id?>"> <?php echo $categoriePhoto->name ?></option>
+            foreach($photoCategories as $photoCategorie):?>
+            <option value="<?php echo $photoCategorie->term_id?>"> <?php echo $photoCategorie->name ?></option>
             <?php endforeach;?>
         </select>
 
@@ -24,12 +23,11 @@ get_template_part('templatsParts/heroHeader');
             <?php 
             $formatsPhoto = get_categories(
             array(
-                'taxonomy' => 'format',
-                'hide_empty' => false,   
+                'taxonomy' => 'format',  
             )
         ); 
-        foreach($formatsPhoto as $categoriePhoto):?>
-        <option value="<?php echo $categoriePhoto->term_id?>"><?php echo $categoriePhoto->name ?></option>
+        foreach($formatsPhoto as $photoCategorie):?>
+        <option value="<?php echo $photoCategorie->term_id?>"><?php echo $photoCategorie->name ?></option>
         <?php endforeach;?>
         </select>
     </div>

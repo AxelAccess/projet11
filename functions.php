@@ -26,13 +26,13 @@ add_action('wp_enqueue_scripts', 'enqueue_jquery');
 
 //**Page principale**\\
 
-// Récupere le nom de la catéggorie de la photo
+// Récupere le nom de la catégorie de la photo
 function get_category_names($post_id) {
     $categories = get_the_terms($post_id, 'categorie_photo');
     $catListNames = '';
 
     if ($categories) {
-        $catListNames = implode(', ', array_column($categories, 'name'));
+        $catListNames = implode(',', array_column($categories, 'name'));
     }
     return $catListNames;
 }
@@ -41,14 +41,13 @@ function get_category_names($post_id) {
 // photos par catégorie
 function get_photos_by_category() {
     if (isset($_GET['category_id'])) {
-        $category_id = absint($_GET['category_id']);
+        $category_id = $_GET['category_id'];
         $args = array(
             'post_type' => 'photo',
             'posts_per_page' => -1,
             'tax_query' => array(
                 array(
-                    'taxonomy' => 'categorie_photo',
-                    'field' => 'term_id',
+                    'taxonomy' => 'categorie_photo',     
                     'terms' => $category_id,
                 ),
             ),
@@ -73,7 +72,7 @@ add_action('wp_ajax_nopriv_get_photos_by_category', 'get_photos_by_category');
 
 function get_photos_by_formats() {
     if (isset($_GET['category_id'])) {
-        $category_id = absint($_GET['category_id']);
+        $category_id = $_GET['category_id'];
         $args = array(
             'post_type' => 'photo',
             'posts_per_page' => -1,
@@ -141,7 +140,7 @@ add_action('wp_ajax_nopriv_get_photos_by_dates', 'get_photos_by_dates');
 
 
 function loadMorePhotos() {
-    $offset = isset($_POST['offset']) ? intval($_POST['offset']) : 0;
+    $offset = $_GET['offset'] ?? 0;
     $args = array(
         'post_type'      => 'photo',
         'posts_per_page' => 8,
@@ -169,8 +168,8 @@ add_action('wp_ajax_nopriv_loadMorePhotos', 'loadMorePhotos');
 
 //display photo hover
 function hoverPhoto() {
-    $post_id = $_POST['post_id']; 
-    $image_url = get_the_post_thumbnail_url($post_id, 'full'); 
+    $post_id = $_GET['post_id']; 
+    $image_url = get_the_post_thumbnail_url($post_id, 'thumbnail'); 
     echo $image_url; 
     wp_die(); 
 }
@@ -191,6 +190,7 @@ function get_adjacent_post_loop($next = true) {
     }
     return $post;
 }
+
 
 //**Menus**\\
 function register_my_menus() {

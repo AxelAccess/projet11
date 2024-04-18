@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
         
         let ajaxurl = $(this).data('ajaxurl');
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: ajaxurl,
             data: {
                 action: 'loadMorePhotos',

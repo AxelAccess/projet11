@@ -22,6 +22,9 @@
 .hiddenOption{
     display: none;
 }
+.hoverSelect :hover{
+    background-color: red;
+}
 .centerButton{
     display: flex;
     justify-content: center;

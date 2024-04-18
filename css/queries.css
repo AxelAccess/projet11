@@ -189,6 +189,16 @@
     }
     .overlay{
         width: 317px;
+        height: 280px;
+    }
+    .fullScreenIco {
+        right: 3px;
+    }
+    .refPhoto{
+        margin-left: 5px;
+    }
+    .catPhoto{
+        margin-right: 5px;
     }
 
     /* modale */
@@ -205,6 +215,9 @@
     }
     .infoPhotoLightBox {
         gap: 150px;
+    }
+    .modalDeco{
+        width: 400px;
     }
 
     /* contact */
