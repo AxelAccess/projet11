@@ -1,5 +1,6 @@
 html{
     margin-top: -14px !important;
+    height: 100%;
 }
 
 .container{
@@ -8,17 +9,25 @@ html{
 }
 
       /* Menu */
+header{
+    box-shadow: 1px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.headerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}      
 .logo{
-    position: absolute;
-    padding-top: 34px;
-    margin-left: 146px;
+    display: block;
+    padding-top: 5px;
 }
 
 /* Bandeau blanc du menu */
 .menu-header-container{
     background-color: white;
     height: 80px;
-    box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.1);
+    
 }
 /* Navigation du menu */
 #menu-header{
@@ -26,8 +35,7 @@ html{
     display: flex;
     justify-content: center;
     gap: 45px;
-    margin-left: 800px;
-    padding-top: 29px;
+    padding-top: 15px;
     font-family: "Space Mono";
 }
 a:-webkit-any-link {

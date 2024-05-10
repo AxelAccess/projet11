@@ -41,7 +41,7 @@
           </div>
       </section>
 
-      <section class="bottomSection">
+      <section class="bottomSection container">
         <p class="alsoLike">Vous aimerez aussi</p>
         <div class="alsoLikePics"><?php
           $idNotIn = array(get_the_ID());

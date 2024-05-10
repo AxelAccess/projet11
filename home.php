@@ -2,21 +2,60 @@
 get_header();  
 get_template_part('templatsParts/heroHeader');
 ?>
-
-<section class="alignForms">
-    <div class=blockForms>
-        <select id="photoCategorySelect" name="event" class="forms">
-            <option value="photoCategories" disabled selected class="hiddenOption">Catégories</option>
+<section class="alignFake">
+    <div class="sel">
+        <div class="label">Catégories</div>
+        <div class="options">
             <?php 
             $photoCategories = get_categories(
                 array(
-                    'taxonomy' => 'categorie_photo',  
+                    'taxonomy' => 'categorie_photo',
                 )
             ); 
             foreach($photoCategories as $photoCategorie):?>
-            <option value="<?php echo $photoCategorie->term_id?>"> <?php echo $photoCategorie->name ?></option>
+                <div data-value="<?php echo $photoCategorie->term_id ?>"><?php echo $photoCategorie->name ?></div>
+            <?php endforeach;?>
+        </div>
+    </div>
+    <div class="sel">
+        <div class="label">Formats</div>
+        <div class="options">
+            <?php 
+            $formatsPhoto = get_categories(
+                array(
+                    'taxonomy' => 'format',  
+                )
+            ); 
+            foreach($formatsPhoto as $photoCategorie):?>
+                <div data-value="<?php echo $photoCategorie->term_id ?>"><?php echo $photoCategorie->name ?></div>
+            <?php endforeach;?>
+        </div>
+    </div>
+    <div class="sel blockFormsForRight">
+        <div class="label">Trier par</div>
+        <div class="options">
+            <div data-value="newest">Plus récentes</div>
+            <div data-value="oldest">Plus anciennes</div>
+        </div>
+    </div>
+</section>
+
+
+<section class="alignForms">
+        <div class="select">
+        <select id="photoCategorySelect" name="event" class="forms">
+            <option  value="photoCategories" disabled selected class="hiddenOption">Catégories</option>
+            <?php 
+            $photoCategories = get_categories(
+                array(
+                    'taxonomy' => 'categorie_photo',
+                )
+            ); 
+            foreach($photoCategories as $photoCategorie):?>
+            <option value="<?php echo $photoCategorie->term_id ?>" class="grrrr"> <?php echo $photoCategorie->name ?></option>
             <?php endforeach;?>
         </select>
+        </div>
 
         <select id="formatSelect" name="format" class="forms">
             <option value="formatsPhoto" disabled selected class="hiddenOption">Formats</option>
@@ -41,7 +80,7 @@ get_template_part('templatsParts/heroHeader');
     </div>
 </section>
 
-<section class="picturesList">
+<section class="picturesList container">
     <div id="photo-container" class="photo-container"> 
         <?php      
         $args = array(

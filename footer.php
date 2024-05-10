@@ -24,6 +24,10 @@
     </div>   
       
 </div>
+<div class="darkbackground"></div>
 
+<div class="contactWindow container">               
+    <img class="modalDeco" src="<?php echo get_stylesheet_directory_uri() ?>/images/ContactHeader.png">               
+    <?= do_shortcode('[contact-form-7 id="4701b95" title="Contact form 1"]');?> 
+</div>
 <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
-

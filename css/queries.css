@@ -1,16 +1,18 @@
-@media (max-width: 500px){
+@media (max-width: 600px){
 /* main */
-
+    .headerContent {
+    margin-left: 10px;
+    }
     .menu-toggle {
         display: block;
         cursor: pointer;
         position: absolute;
-        top: 17px;
+        top: 25px;
         right: 50px;
     }
     .menu-toggle.cross{
         top: 25px;
-        right: 20px;
+        right: 70px;
     }
     .bar {
         display: block;
@@ -33,25 +35,27 @@
 
     header {
         z-index: 1;
-        width: 485px !important;
-        margin-left: -35px;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        margin-left: -10px;
     }
     #menu-header{
         display: none;
         background-color: #E00000;
-        width: 485px;
+        width: 100%;
         position: absolute;
-        margin-left: 0;
+        left: 0;
         height: 1000px;
         margin-top: 80px;
         z-index: 1;
     }
     #menu-item-50{
-        margin-top: 190px;
+        margin-top: 140px;
     }
     .menu-item{
-        margin-left: 80px;
-        margin-top: 30px;
+        display: flex;
+        justify-content: center;
         font-size: xxx-large;
     }
     a:-webkit-any-link {
@@ -59,52 +63,49 @@
     
     }
     
-    .logo {
-        position: absolute;
-        padding-top: 34px;
-        margin-left: 70px;
-        width: 40%;
-    }
+    
 
-    .menu-header-container{
-        margin-left: 25px;
-        width: 100%;
-    }
     .picTitleHeader {
-        width: 288px;
+        width:80%!important;
     }
-    .titleHeader{
-        margin-left: 9%;
-        margin-top: 100px;
+    .titleHeader {
+        position: absolute;
+        left: calc(40% - (200px / 2));
+        top: calc(70% - (80px / 2))!important;
     }
     .divHeroHeader{
-        display: flex;
-        margin-left: 40px;
-        width: 375px;
-        height: 250px;
+        margin: auto;
     }
     .heroHeader {
         width: 100%;
-        height: 250px;
+        height: 250px!important;
     }
 
-
+    .alignFake{
+        gap: 9px;
+        margin-top: 25px!important;
+    }
     .alignForms{
         display: block;
-        margin-left: 80px;
+        margin-bottom: 38px;
         margin-top: 38px;
     }
     .blockForms {    
         display: flex;
         justify-content: center;
         flex-direction: column;
+        align-items: center;
         gap: 8px;
     }
     .blockFormsForRight {
-        margin-top: 8px;
+        display: flex;
+        align-items: center;
         margin-left: 0px;
+        margin-top: 8px;
     }
-
+    .overlay{
+        max-width:564px ;
+    }
     .alsoLikePic {
         width: 317px;
         height: 278px;
@@ -120,8 +121,7 @@
     #menu-footer a{
         font-family: "Space Mono"!important;
         font-size: large;
-        color: black!important;
-        margin-right: 120px;
+        color: black!important;   
     }
 
     /* mainEnd */
@@ -132,10 +132,13 @@
     }
     .mainPics {
         padding-top: 20px;
-        margin-left: 90px;
+        margin-left: 0;
         width: 265px;
         height: 397px;
         object-fit: cover;
+    }
+    .blocMainPic{
+        margin: auto;
     }
 
     .descriptionPicsTitle {
@@ -145,14 +148,14 @@
         padding-top: 0;
         margin-bottom: 0px;
         font-family: "Space Mono";
-        
+        margin: auto;
     }
     .descriptionPics a{
         color: black!important;
+        
     }
     .descriptionBlock {
-        width: 380px;
-        padding-left: 90px;
+        margin: auto;
     }
 
     .middleSection {
@@ -183,9 +186,12 @@
         margin-bottom: 24px;
 
     }
+    .photo-container{
+        margin: auto;
+        max-width: 850px;
+    }
     .alsoLikePics {
         flex-direction: column;
-        margin-left: 70px;
     }
     .overlay{
         width: 317px;
@@ -202,19 +208,11 @@
     }
 
     /* modale */
-    .lightBoxArrowsPhoto {
+    .contactWindow{}
 
-        flex-direction: column;
-    }
-    .lightBoxArrow {
-        margin: 0px; 
-    }
-    .lightBoxPic {
-        max-width: 500px;
-        max-height: 500px;
-    }
     .infoPhotoLightBox {
         gap: 150px;
+        width: 70%!important;
     }
     .modalDeco{
         width: 400px;
@@ -226,7 +224,7 @@
         position: fixed;
         background-color: white;
         top: 10px;
-        left: 40px;
+        left: 40px!important;
         z-index: 9999;
         width: 400px;
         height: 710px;
@@ -253,3 +251,127 @@
     }
 }
 
+@media (max-width: 1180px){
+    
+.titleHeader {
+    position: absolute;
+    left: calc(50% - (750px / 2));
+    top: calc(50% - (80px / 2));
+}
+    .alignFake{
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    #sortId{
+        margin-left: 0px;
+    }
+    .sel{
+        width:200px;
+    }
+    .sel .options{
+        width:200px;
+    }
+    .contactWindow{
+        left: 20%;
+    }
+    .alignForms{
+        margin-bottom: 38px;
+    }
+
+    .blockFormsForRight {
+        margin-left: 35px;
+    }
+    .alsoLike{
+        justify-content: center;
+        padding-left: 0;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    .photo-container{
+        margin: auto;
+        max-width: 850px;
+    }
+    .alsoLikePics {
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .overlay{
+        width: 317px;
+        height: 280px;
+        max-width: none;
+    }
+}
+@media (max-width: 900px){
+    .picTitleHeader {
+        width:80%!important;
+    }
+    .titleHeader {
+        position: absolute;
+        left: calc(30% - (200px / 2));
+        top: calc(50% - (80px / 2));
+    }
+    .alignFake{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 50px;
+        align-items: center;
+    }
+    #sortId{
+        margin-left: 0px;
+    }
+    .alignForms{
+        display: block;
+        margin-bottom: 38px;
+        margin-top: 38px;
+    }
+    .blockForms {    
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .blockFormsForRight {
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        margin-top: 8px;
+    }
+    .heroHeader {
+        height: 500px;
+    }
+
+    .photo-container{
+        margin: auto;
+        max-width: 600px;
+    }
+    .overlay{
+        width: 317px;
+        height: 280px;
+    }
+    .descriptionPicsTitle {
+        font-size: 40px;
+    }
+    .lightBoxArrowsPhoto {
+
+        flex-direction: column;
+    }
+    .lightBoxArrow {
+        margin: 0px; 
+    }
+    .lightBoxPic {
+        max-width: 500px;
+        max-height: 500px;
+    }
+    .infoPhotoLightBox {
+        gap: 150px;
+        width: 80%;
+    }
+}

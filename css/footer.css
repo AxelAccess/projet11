@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     gap: 45px;
+    font-family: "Space Mono";
+    padding-top: 14px;
+    margin: auto;
+    padding-bottom: 14px;
 }
 
             /* LightBox */
@@ -29,13 +33,17 @@
     object-fit: contain;
     max-width: 1100px;
     max-height: 650px;
+    width: 100%;
+
 }
 
 /* InfoPhoto de la lightbox */
 .infoPhotoLightBox{
     display: flex;
     flex-direction: row;
-    gap: 573px;
+    justify-content: space-between;
+    cursor: default;
+    width: 60%;
 }
 
 /* Couleur infoPhoto de la lightbox */
@@ -54,8 +62,11 @@
     width: 90%;
     z-Index: 1;
 }
-.lightBoxArrow{
-    margin: 50px;
+#rightArrow{
+    margin-left: 50px;
+}
+#leftArrow{
+    margin-right: 50px;
 }
 .arrowLeftText, .arrowRightText{
     display: flex;
